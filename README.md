@@ -13,7 +13,7 @@
 - https://github.com/octarinasalsa03/ROCK-weka/blob/main/src/main/java/weka/clusterers/Rocks.java
 - src/main/java/weka/clusterers/Rocks.java
 
-Part of the source we modified is the ROCK.java file
+Part of the source we modified is the Rocks.java file
 
 ### weka.jar path
 - https://github.com/octarinasalsa03/ROCK-weka/blob/main/weka.jar
