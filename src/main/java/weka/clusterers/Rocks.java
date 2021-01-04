@@ -125,21 +125,19 @@ public class Rocks extends AbstractClusterer implements
 
         int nInstances = m_instances.numInstances();
         m_DistanceFunction.setInstances(m_instances);
-        // use array of integer vectors to store cluster indices,
-        // starting with one cluster per instance
         @SuppressWarnings("unchecked")
-        Vector<Integer>[] nClusterID = new Vector[data.numInstances()];
+        Vector<Integer>[] clusters = new Vector[data.numInstances()];
         for (int i = 0; i < data.numInstances(); i++) {
-            nClusterID[i] = new Vector<Integer>();
-            nClusterID[i].add(i);
+            clusters[i] = new Vector<Integer>();
+            clusters[i].add(i);
         }
 
-        int data_size = nClusterID.length;
+        int data_size = clusters.length;
 
         double[] adj_matrix;
         for(int i = 0; i < data_size; i++) {
             for(int j = i+1; j < data_size; j++) {
-                double distance = euclideanDistance(nClusterID[i], nClusterID[j]);
+                double distance = euclideanDistance(clusters[i], clusters[j]);
             }
         }
     }
